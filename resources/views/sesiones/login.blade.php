@@ -42,7 +42,7 @@
             <div class="col">
                 <!-- Sesion -->
                 <div class="text-end">          
-                        <img src="{{asset ('img/anuies_logo.png') }}" width="200px" alt="">
+                        <img src="{{asset ('img/logotipoutvt.png') }}" width="200px" alt="">
                 </div><!-- Logo -->
 
                 <h2 class="fw-bold text-center pb-3">Inicia Sesión</h2><!-- Form de Inicio de Sesion -->
