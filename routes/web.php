@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 use App\Http\Controllers\ArchivosController;
 use App\Http\Controllers\InformacionController;

@@ -1,90 +1,37 @@
 @extends('layout.layout')
 @section('content')
-@section('title', 'Inicio')
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+@section('title', 'Directorio')
 <br>
 
 
 <div class="container">
   <div class="row">
-    
-    <div class="col s12 m12">
-      @foreach($directorio as $d)
-    <div class="col s12 m12">
-                <a class="black-text text-lighten-3"><strong>Puestos: {{$d->puesto}}</strong></a><br>
-                <a class="black-text text-lighten-3">Nombre: {{$d->nombre}}</a><br>
-                <a class="black-text text-lighten-3">Institucion: {{$d->institucion}}</a><br>
-                <a class="black-text text-lighten-3">Telefono: {{$d->telefono}}</a><br>
-                <a class="black-text text-lighten-3">Correo electrónico: {{$d->email}}</a>
+    <div class="col l12 m12 s12" style="padding-bottom: 20px;">
+      <h3>Directorio</h3>
+    </div>
+    @foreach($directorio as $d)
+    <div class="col l6 m6 s12">
+      <p><strong style="color: #85344C">Puestos:</strong> {{$d->puesto}} <br> <strong style="color: #85344C">Nombre:</strong> {{$d->nombre}} <br> <strong style="color: #85344C">Institución:</strong> {{$d->institucion}} <br> <strong style="color: #85344C">Teléfono:</strong> {{$d->telefono}} <br> <strong style="color: #85344C">Correo electrónico:</strong> {{$d->email}}</p>
     </div>
     @endforeach
-    
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col"><a style="color: #85344C"  >IES</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($universidades as $u)
-    <tr>
-      <td><a href="{{$u->url}}" style="color: #85344C">{{$u->nombre}}</a></td>
-      <td>{{$u->siglas}}</td>
-      <td><img src="{{ asset ('Imagenes/'.$u->logo) }}" style="width:50px;"></td>
-      </tr>
-    @endforeach
-  </tbody>
-</table>
-    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"><a style="color: #85344C">IES</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($universidades as $u)
+        <tr>
+          <td><a href="{{$u->url}}" style="color: #85344C">{{$u->nombre}}</a></td>
+          <td>{{$u->siglas}}</td>
+          <td><img src="{{ asset ('Imagenes/'.$u->logo) }}" style="width:50px;"></td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 </div>
-
-
-
-
-
-
-
-
-@section('footer')
-<div class="container">
-    <div class="row">
-        <div class="col l6 s12">
-            <h5 class="white-text flow-text">ANUIES</h5>
-            <p class="grey-text text-lighten-4">Asociación Nacional de Universidades e Instituciones de Educación Superior</p>
-            <span class="flow-text">Consejos Regionales</span>
-            <br>
-            <small class="right">
-                <span>NOROESTE <br> NORESTE <br> CENTRO OCCIDENTE <br> CRAM <br> CENTRO SUR <br> SUR SURESTE</span>
-            </small>
-        </div>
-        <div class="col l4 offset-l2 s12">
-            <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">- Plan de Desarrollo Institucional, Visión 2030 de la ANUIES</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Visión y acción 2030. Propuesta de la ANUIES para renovar la educación superior en México </a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Sesiones de los Órganos Colegiados</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Convocatorias de la SGE</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Convocatorias de IES Asociadas</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Becas de las IES Asociadas</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Programas y Premios</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">- Diario Oficial </a> / <a href="#!" class="grey-text text-lighten-3">PRODECON</a> / <a href="!#" class="grey-text text-lighten-3"> Nuevo Sistema de Justicia Penal</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="footer-copyright">
-    <div class="container">
-        <div class="row valign-wrapper">
-            <div class="col s12 m6">
-                <a href="#!" class="grey-text text-lighten-3">Normatividad</a>
-            </div>
-            <div class="col s12 m6">
-                <a href="#!" class="grey-text text-lighten-3">Procedimientos, requisitos y tipología para el ingreso de instituciones de Educación a la ANUIES, A.C.</a>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
 
 @endsection
